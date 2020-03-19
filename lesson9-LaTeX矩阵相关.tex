@@ -1,0 +1,135 @@
+\documentclass{ctexart}
+
+\usepackage{amsmath}
+
+\newcommand{\adots}{\mathinner{\mkern2mu\raisebox{0.1em}{.}\mkern2mu\raisebox{0.4em}{.}\mkern2mu\raisebox{0.7em}{.}\mkern1mu}}
+%感觉这里好难的感觉，定义一个反斜点
+\begin{document}
+	\[  %在这种写法中不可以出现空格否则会出错
+	\begin{matrix}  % 普通得没有边界符号的矩阵
+		0 & 1 \\   %用&分隔列，用\\分隔行
+		1 & 0
+	\end{matrix} \qquad
+	\begin{pmatrix}  %矩阵两端加小括号
+		1 & -i \\
+		i & 0
+	\end{pmatrix} \qquad
+	\begin{bmatrix}  %矩阵两端加中括号
+		0 & -1 \\
+		1 & 0
+	\end{bmatrix} \qquad
+	\begin{Bmatrix}  %矩阵两端加花括号
+		1 & 0 \\
+		0 & -1
+	\end{Bmatrix} \qquad
+	\begin{vmatrix}  %矩阵两端加单竖线，注意此处与行列式不同
+		a & b & e \\
+		c & d & f
+	\end{vmatrix} \qquad
+	\begin{Vmatrix}  %矩阵两端加双竖线
+		i & 0 \\
+		0 & -i 
+	\end{Vmatrix} \qquad
+	\]
+	
+	\[
+		A = \begin{pmatrix} % 使用pmatrix环境并且指定任意单个元素的形态
+			a_{11} ^ 2 & a_{12} ^ 2 & a_{13} ^ 2 \\
+			0 & a_{22} & a_{23} \\
+			0 & 0 & a_{33}
+			\end{pmatrix}
+	\]
+	
+	\[
+		%常用的省略号：\dots,\vdots，\ddots
+		A = \begin{bmatrix}
+			a_{11} & \dots & a_{1n} \\ % \dots表示横向的省略号
+			\adots & \ddots & \vdots \\ % \ddots表示对角省略号，\vdots表示竖向省略号，而\adots表示自定义的反对角省略号，参考上面定义的newcommand写法
+			0 &  & a_{nn}
+			\end{bmatrix}_{n \times n} %表示nxn矩阵
+	\]
+	
+	%分块矩阵，注意分块矩阵的写法，相当于矩阵内嵌套矩阵
+	\[
+		A = \begin{pmatrix}
+			\begin{matrix}
+				1 & 0 \\
+				0 & 1
+			\end{matrix} & \text{\LARGE 0} \\
+			\text{\LARGE 0} & \begin{matrix}
+				1 & 0 \\
+				0 & -1
+			\end{matrix}
+		\end{pmatrix}
+	\]
+	
+	%三角矩阵
+	\[
+		A = \begin{pmatrix}
+			a_{11} & a_{12} & \cdots & a_{1n} \\
+			& a_{12} & \cdots & a_{2n} \\
+			& & \ddots & \vdots \\
+			\multicolumn{2}{c}{\raisebox{1.3ex}[0pt]{\Huge 0}} & & a_{nn}
+		\end{pmatrix}
+	\]
+	
+	% 跨列的省略号
+	\[
+		A = \begin{pmatrix}
+		1 & \frac 12 & \dots & \frac 1n \\
+		\hdotsfor{4} \\
+		m & \frac{m}{2} & \dots & \frac mn
+		\end{pmatrix}
+	\]
+	
+	
+	% 行内小矩阵（smallmatrix）环境
+	复数$ z = (x,y) $ 也可以用矩阵
+	\begin{math}
+		\left(  %需要手动加上左括号
+		\begin{smallmatrix}
+			x & -y \\ y & x
+		\end{smallmatrix}
+		\right) %需要手动加上右括号
+	\end{math}来表示。
+	
+	% array环境（类似于表格环境tabular）
+	\[
+		A = \begin{array}{r|r} % {r|r}指定对应位置的元素对齐方式为居右
+		\frac{1}{2} & 0 \\
+		\hline  % 横线
+		0 & -\frac abc \\ % 此处为省略写法，frac后面没有group符号，默认一个字符为一个占位元素
+		\end{array}
+	\]
+	
+	\[
+		A = \begin{array}{c@{\hspace{-5pt}}l}
+			\left(
+				\begin{array}{ccc|ccc}
+				a & \cdots & a & b & \cdots & b \\
+				& \ddots & \vdots & \vdots & \adots \\
+				& & a & b \\
+				\hline
+				& & & c & \cdots & c \\
+				& & & \vdots & \ddots & \vdots \\
+				\multicolumn{3}{c|}{\raisebox{2ex}[0pt]{\huge 0}} & c & \cdots & c
+				\end{array}
+			\right)
+			&
+			% 第一行
+			\begin{array}{l}
+				% \left.表示仅与\right\}配对，什么都不输出
+				\left.\rule{0mm}{7mm}\right\}p\\ % 第一列
+				\\
+				\left.\rule{0mm}{7mm}\right\}q   % 第二列
+			\end{array}
+			\\[-5pt]
+			% 第二行
+			\begin{array}{cc}
+				\underbrace{\rule{17mm}{0mm}}_m & % 第一列，\underbrac命令命令横向排版花括号，用下标的方式指定m标识符
+				\underbrace{\rule{17mm}{0mm}}_n   %第二列
+			\end{array}
+		\end{array}
+	\]
+	
+\end{document}

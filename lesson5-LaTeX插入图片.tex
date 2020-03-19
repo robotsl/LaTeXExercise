@@ -1,0 +1,39 @@
+% 导言区
+\documentclass{article} % article,book,report,letter 
+\usepackage{ctex}   %命令行使用texdoc ctex 查看文档
+\usepackage{graphicx}
+% 语法：\includegraphics[<选项>]{<文件名>}
+% 格式：EPS,PDDF,PNG,JPEG,BMP
+\graphicspath{{figures/}，{pics/}}  %图片在当前目录下的 figure 目录
+\title{\heiti 我的第五个文档}
+\author{\kaishu 廖兴滨}
+\date{\today}
+% 正文区
+
+\begin{document}  %一个tex文件中只能出现一个document
+	\LaTeX{} 中的插图：
+		
+	\includegraphics{Russells-viper}
+	\includegraphics{test.pdf}
+	
+	\includegraphics[scale=0.3]{Russells-viper}
+	\includegraphics[scale=0.03]{test.pdf}
+	
+	
+	\includegraphics[height=2cm]{Russells-viper}
+	\includegraphics[height=2cm]{test.pdf}
+	
+	\includegraphics[width=2cm]{Russells-viper}
+	\includegraphics[width=2cm]{test.pdf}
+	
+	\includegraphics[height=0.1\textheight]{Russells-viper}
+	\includegraphics[height=\textheight]{test.pdf}
+	
+	\includegraphics[height=0.2\textwidth]{Russells-viper}
+	\includegraphics[height=\textwidth]{test.pdf}
+	
+	\includegraphics[angle=-45,width=0.2\textwidth]{Russells-viper}
+	
+	\includegraphics[angle=45,width=0.2\textwidth]{Russells-viper}
+	
+\end{document}

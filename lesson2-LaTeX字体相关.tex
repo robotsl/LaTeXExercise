@@ -1,0 +1,62 @@
+% 导言区
+\documentclass[12pt]{article} % article,book,report,letter [10pt]表示十磅，只有10，11，12这三个
+\usepackage{ctex}   %命令行使用texdoc ctex 查看文档
+
+\newcommand{\myfont}{\textit{\textbf{Fancy Text}}} %这里相当于定义了一个宏
+
+\title{\heiti 我的第二个文档}
+\author{\kaishu 廖兴滨}
+\date{\today}
+% 正文区
+
+\begin{document}  %一个tex文件中只能出现一个document
+	\maketitle
+	
+	英文字体设置如下：
+	
+	% 字体族设置 （罗马字体、无衬线字体、打字机字体）
+	\textrm{Roman Family} \textsf{Sans Serif Family} \texttt{Typewriter Family}
+	{\rmfamily Roman Family} {\sffamily Sans Serif Family} {\ttfamily Typewriter Family}
+	%可以用花括号声明作用域
+
+	
+	\sffamily who are you? what's your name? balabala
+	
+	\ttfamily Are you wise than others?
+	
+	% 字体设置系列设置（粗细、宽度）
+	\textmd{Medium Series} \textbf{Boldface Series} %字体设置命令
+	{\mdseries Medium Series} {\bfseries Boldface Series}  %字体设置声明
+	
+	%字体形状（直立、斜体、伪斜体、小型大写）
+	\textup{Upright Shape} \textit{Italic Shape}
+	\textsl{Slanted Shape} \textsc{Small Caps Shape}
+	
+	{\upshape Upright Shape} {\itshape Italic Shape}
+	{\slshape Slanted Shape} {\scshape Small Caps Shape}
+	
+	中文字体设置如下：%需使用ctex宏包
+	
+	% 字体
+	{\songti 宋体} \quad {\heiti 黑体} \quad {\fangsong 仿宋} \quad {\kaishu 楷书}
+	中文的\textbf{粗体}与\textit{斜体}
+	
+	% 字体大小
+	{\tiny Hello }\\
+	{\scriptsize Hello}\\
+	{\footnotesize Hello}\\
+	{\small Hello}\\
+	{\normalsize Hello}\\
+	{\large Hello}\\
+	{\Large Hello}\\
+	{\LARGE Hello}\\
+	{\huge Hello}\\
+	{\Huge Hello}\\
+	
+	%中文字号设置命令
+	\zihao{5}  你好！
+	
+	\myfont
+
+	
+\end{document}

@@ -1,0 +1,66 @@
+% 导言区
+%\documentclass{article} % article,book,report,letter
+\documentclass{ctexbook} % 标题居中
+%\usepackage{ctex}   
+\ctexset{   %独立设置段落title的格式
+	section = {
+		format+ = \zihao{-4} \heiti \raggedright,
+		name = {,、 },
+		number = \chinese{section},
+		beforeskip = 1.0ex plus 0.2ex minus .2ex,
+		afterskip  = 1.0ex plus 0.2ex minus .2ex,
+		aftername = \hspace{0pt}
+	},
+	subsection = {
+		format+ = \zihao{5} \heiti \raggedright,
+		name = {,、 },
+		number = \arabic{subsection},
+		beforeskip = 1.0ex plus 0.2ex minus .2ex,
+		afterskip  = 1.0ex plus 0.2ex minus .2ex,
+		aftername = \hspace{0pt}
+	}
+	
+}
+
+
+
+\begin{document}  %一个tex文件中只能出现一个document
+	%\maketitle %\maketitle只有article有
+	\tableofcontents
+	
+	\chapter{绪论}report和book类型的排版有chapter，article里没有
+	\section{引言小结} % 篇章段落
+	环境：win7 + texlive 2016 + TeXstudio
+	
+	问题：xelatex编译一个很短的文章时非常慢
+	
+	解决方法：
+	
+	A. 以管理员身份运行fc-cache
+	
+	%对比\\ 和 \par 的用法有什么区别
+	B. 在texlive安装路径bin/win32下，设置xelatex.exe以管理员身份启动设置xelatex.exe以管理员身份启动设置xelatex.exe以管理员身份启动。
+
+	C. 启动TeXstudio时以管理员身份启动
+	
+	环境：win7 + texlive 2016 + TeXstudio
+	
+	问题：xelatex编译一个很短的文章时非常慢
+	
+	解决方法：
+	
+	A. 以管理员身份运行fc-cache
+	
+	B. 在texlive安装路径bin/win32下，设置xelatex.exe以管理员身份启动,设置xelatex.exe以管理员身份启动设置xelatex.exe以管理员身份启动设置xelatex.exe以管理员身份启动。
+	
+	C. 启动TeXstudio时以管理员身份启动
+	\chapter{实验结果与分析}  % report和book类型的排版有chapter，article里没有
+	\section{实验方法}
+	\subsection{数据}
+	\subsection{图表}
+	\subsubsection{第一段}
+	\subsubsection{第二段}
+	\section{实验结果}
+	\section{结论}
+	\section{致谢}
+\end{document}

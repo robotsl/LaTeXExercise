@@ -1,0 +1,64 @@
+% 导言区
+\documentclass{article} % article,book,report,letter 
+\usepackage{ctex}   %命令行使用texdoc ctex 查看文档
+\usepackage{float} 
+\title{\heiti 我的第六个文档}
+\author{\kaishu 廖兴滨}
+\date{\today}
+% 正文区
+%与表格相关的文档可以使用texdoc booktab/longtab/tabu命令查看
+
+
+\begin{document}  %一个tex文件中只能出现一个document
+	\maketitle
+	\begin{tabular}{l c c c r}
+		姓名 & 语文 & 数学 & 外语 & 备注 \\
+		张三 & 87 & 100 & 93 & 优秀 \\
+		张三 & 87 & 100 & 93 & 优秀 \\
+		张三 & 87 & 100 & 93 & 优秀 \\
+	\end{tabular}
+	
+	\begin{tabular}{|| l || c || c || c || r ||}
+		\hline \hline
+		姓名 & 语文 & 数学 & 外语 & 备注 \\
+		\hline \hline
+		张三 & 87 & 100 & 93 & 优秀 \\
+		\hline \hline
+		张三 & 87 & 100 & 93 & 补考，另行通知 \\
+		\hline \hline
+		张三 & 87 & 100 & 93 & 优秀 \\
+		\hline \hline
+	\end{tabular}
+
+
+	\begin{tabular}{| l | c | c | c | p{1.5cm} |} % 超过指定宽度会自动换行
+		\hline 
+		姓名 & 语文 & 数学 & 外语 & 备注 \\
+		\hline 
+		张三 & 87 & 100 & 93 & 优秀 \\
+		\hline 
+		张三 & 87 & 100 & 93 & 补考，另行通知 \\
+		\hline 
+		张三 & 87 & 100 & 93 & 优秀 \\
+		\hline 
+	\end{tabular}
+	\begin{table}[H]
+		%\renewcommand{\arraystretch}{1.3}
+		\caption{本学期期末成绩表}
+		\label{tab1}
+		\centering
+		\begin{tabular}{| l | c | c | c | p{2.5cm} |} % 超过指定宽度会自动换行
+			\hline 
+			姓名 & 语文 & 数学 & 外语 & 备注 \\
+			\hline 
+			张三 & 87 & 100 & 93 & 优秀 \\
+			\hline 
+			张三 & 87 & 100 & 93 & 补考，另行通知 \\
+			\hline 
+			张三 & 87 & 100 & 93 & 优秀 \\
+			\hline 
+		\end{tabular}
+	\end{table}
+
+
+\end{document}

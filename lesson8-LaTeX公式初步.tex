@@ -1,0 +1,94 @@
+% 导言区
+\documentclass{article} % article,book,report,letter [10pt]表示十磅，只有10，11，12这三个
+\usepackage{ctex}   %命令行使用texdoc ctex 查看文档
+\usepackage{amsmath}
+
+
+\title{\heiti 我的第八个文档}
+\author{\kaishu 廖兴滨}
+\date{\today}
+% 正文区
+
+\begin{document}  %一个tex文件中只能出现一个document
+	\section{简介}
+	\LaTeX{}将排版内容分为文本模式和数学模式。文本模式用于普通文本排版，数学模式用于数学公式排版。
+	
+	\section{行内公式}
+	\subsection{美元符号}
+	交换律是 $ a + b = b + a $,如 $ 1 + 2 = 2 + 1 = 3 $。
+	
+	\subsection{小括号}
+	交换律是 \( a + b = b + a \)，如 \( 1 + 2 = 2 + 1 = 3 \) 。
+	
+	\subsection{math环境}
+	交换律是 \begin{math} a + b = b + a \end{math}，如 \begin{math} 1 + 2 = 2 + 1 = 3 \end{math} 。
+	
+	\section{上下标}
+	\subsection{上标}
+	$ 3x^{20} - x + 2 = 0 $和$ 3x^20 - x + 2 = 0 $对比。
+	
+	而$ 3x^{3x^{20} - x + 2} - x + 2 = 0 $可以嵌套公式。
+	
+	\subsection{下标}
+	$ a_0,a_1,a_2 $ 、$ a_11,a_12,a_13 $ 和 $ a_{11},a_{12},a_{13} $ 以及 $ a_{1,1},a_{1,2},a_{1,3} $ 的对比。
+	
+	\section{希腊字母}
+	$ \alpha $ $ \beta $ $ \gamma $ $ \epsilon $  $ \pi $   $ \omega $
+	
+	$ \Gamma $ $ \Delta $ $ \Theta $ $ \Pi $ $ \Omega $
+	
+	$ \alpha^3 + \beta^2 + \gamma = 0 $
+	
+	\section{数学函数}
+	$ \log $ $ \sin $ $ \cos $ $ \arctan $ $ \arcsin $ $ \ln $ $ \sinh $
+	
+	$ \sin^2 x + \cos^2 x = 1 $
+	
+	$ y = \sin^{-1} x + \tan x $
+	
+	$ y =  \sqrt{2} $  $ y = \sqrt{x^2 + \sqrt{3}} $ $ \sqrt[n]{x} = 5 $
+	
+	\section{分式}
+	大约是原体积的$ 3/4 $。
+	
+	大约是原体积的$ \frac{3}{4} $。
+	
+	$ y = \sqrt[3]{\frac{\sqrt{x^2 + \sqrt{3}}}{x^2 + 2x + 1 } }$
+	
+	\section{行间公式}
+	\subsection{美元符号}
+	交换律是 $$ a + b= b + a $$ 如$$ 1 = 2 = 2 + 1 = 3 $$
+	
+	\subsection{中括号}
+	交换律是 \[ a + b= b + a \] 如 \[ 1 = 2 = 2 + 1 = 3 \]
+	
+	\subsection{diaplaymath环境}
+	交换律是 
+	\begin{displaymath}
+	a + b= b + a
+	\end{displaymath}  
+	如 
+	\begin{displaymath}
+	1 = 2 = 2 + 1 = 3
+	\end{displaymath}
+	
+	\subsection{自动编号公式equartion 环境}
+	自动编号的公式见式\ref{eq:commutative}
+	\begin{equation}
+		a + b= b + a \label{eq:commutative}
+	\end{equation}
+	
+	\subsection{不编号公式equartion*环境}
+	不编号的公式见式\ref{eq:commutative2}
+	\begin{equation*}
+		a + b = b + a \label{eq:commutative2}
+	\end{equation*}
+
+	公示的编号与交叉引用也是自动实现的，大家在排版的时候，要习惯于采用自动化的方式诸如图、表、公式的编号与交叉引用。
+	
+	自动编号的公式见式\ref{eq:commutative3}
+	\begin{equation}
+	a + b= b + a \label{eq:commutative3}
+	\end{equation}
+
+\end{document}
