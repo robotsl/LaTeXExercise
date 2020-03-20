@@ -1,0 +1,38 @@
+\documentclass{article}
+
+\usepackage{ctex}
+
+\bibliographystyle{plain} % plain unsrt alpha abbrv
+
+\begin{document}
+	% 参考文献 的引用格式设置
+	% 一次管理，一次使用
+	% 参考文献各式：
+	% \begin{thebibliography}{编号样本
+	%	\bibitem[记号]{引用标志} 文献条目 1
+	%	\bibitem[记号]{引用标志} 文献条目 2
+	%	......
+	% \end{thebibliography}
+	% 其中文献条目包括：作者，题目，出版社，年代，版本，页码等。
+	% 引用时可以采用：\cite{引用标志1，引用标志2，...}
+
+	引用一篇文章\cite{article1} 引用一本书\cite{book1}
+
+	\begin{thebibliography}{99}
+		% 手动写参考文献
+		\bibitem{article1}陈立辉，苏伟，蔡川，陈晓云.\emph{基于LaTex的Web数学公式提取方法研究}[J]. 计算机科学. 2014(06)
+		\bibitem{book1}William H. Press,Saul A. Teukolsky,Willian T. Vetterling,Brain P. Flannery,\emph{Numerical Recipes 3rd Edition:The Art of Scientific Computing} Cambridge University Press, New York,2007.
+	\end{thebibliography}
+	
+	%通过引用bibtex的方式引用文献，很简便，还要学会zotero和jabreference这样能提高生产力的插件和软件
+	这是一个参考文献的引用： \cite{mittelbach2004} % 声明引用的article或者book等“被引关键字”（我也不知道这个叫啥，先这样叫吧）
+	
+	这是另一个参考文献的引用： \cite{OsbandDeep}
+	
+	这是另一个参考文献的引用： \cite{_expectimaxdouble_nodate}
+	
+	\bibliography{document11,dqn}  % 对于预先定义在bib文件中的内容，引用时需要将bib文件名在此处声明
+	
+	
+	
+\end{document}
